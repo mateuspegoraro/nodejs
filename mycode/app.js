@@ -1,7 +1,7 @@
-var express = require('express');
-var app = express();
+var configura = require('./config/express');
+var app = configura();
 
-app.set('view engine', 'ejs');
+app.set('view engine', 'ejs'); 
 app.get('/produtos', function(req, res){
 	console.log('atendendo a requisição');
 	res.render("produtos/lista");
